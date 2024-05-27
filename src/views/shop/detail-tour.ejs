@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--LINK FONTAWESOME--------------------------------------------------------------- -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--LINK BOOTSTRAP--------------------------------------------------------------- -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/header - Copy - Copy - Copy.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        html {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body  {
+  position: relative;
+}
+header {
+  display: flex;
+  justify-content: center;
+}
+
+/*header slider 
+-----------------------------------------------------------------------------------------------------
+*/
+
+.slider {
+  max-width: 100vw;
+  height: 300px;
+  margin: auto;
+  font-family: monospace;
+  position: absolute;
+  overflow: hidden;
+  z-index: -999;
+}
+.slider-list_items {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  width: 400%;
+  transition: 1s;
+}
+
+.slider-list_items .item:nth-child(1):after {
+  content: "";
+  width: 33.3333333%;
+  max-width: 100vw;
+  height: 250px;
+  position: absolute;
+  opacity: 0.9;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(87, 85, 85, 0.747) 10%,
+    rgb(87, 85, 85) 20%,
+    transparent 80%,
+    transparent 100%
+  );
+  left: 0;
+}
+
+.slider-list_items .item:nth-child(2):after {
+  content: "";
+  width: 33.3333333%;
+  max-width: 100vw;
+  height: 250px;
+  position: absolute;
+  opacity: 0.9;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(87, 85, 85, 0.683) 10%,
+    rgb(87, 85, 85) 20%,
+    transparent 80%,
+    transparent 100%
+  );
+  left: 100vw;
+}
+.slider-list_items .item:nth-child(3):after {
+  content: "";
+  width: 33.3333333%;
+  max-width: 100vw;
+  height: 250px;
+  position: absolute;
+  opacity: 0.9;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(87, 85, 85, 0.767) 10%,
+    rgb(87, 85, 85) 20%,
+    transparent 80%,
+    transparent 100%
+  );
+  left: 200vw;
+}
+
+.slider-list_items .item img {
+  width: 100vw;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/*button prev and next - vẫn nằm trong phần slider
+  -----------------------------------------------------------------------------------------------
+  */
+.buttons {
+  position: absolute;
+  top: 45%;
+  left: 5%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(192, 184, 197, 0.5);
+  color: #fff;
+  border: none;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+/*header navbar
+----------------------------------------------------------------------------------------------------
+*/
+
+.jumbotron h2 {
+  text-transform: uppercase;
+  font-size: 24px;
+}
+.container {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+  align-items: center;
+  width: 90%;
+}
+.navbar {
+  z-index: 9999;
+  background-color: transparent;
+  border: 0;
+  font-size: 12px !important;
+  line-height: 1.42857143 !important;
+  letter-spacing: 1px;
+  border-radius: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+  align-items: center;
+}
+.container .bar-icon {
+  position: relative;
+  right: 0;
+}
+i {
+  margin-left: 5px;
+}
+.container .navbar-nav li {
+  padding: 0 10px;
+}
+
+.navbar li a {
+  color: #000000 !important;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.navbar {
+  background-color: #ffffffba;
+  height: 70px;
+  box-shadow: 0px 2px px #000;
+}
+
+.navbar .navbar-brand img {
+  font-size: 10px;
+  position: absolute;
+  top: 0;
+  left: 100px;
+  width: 100px;
+}
+
+.container .navbar-collapse {
+  justify-content: center;
+  align-items: center;
+}
+
+.container .navbar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .navbar-nav li {
+  padding: 0 15px;
+}
+/*language hover 
+--------------------------------------------------------------------------------------------
+*/
+.container .navbar-nav .nav-item {
+  position: relative;
+}
+.container .navbar-nav .nav-item a {
+  text-decoration: none;
+}
+.container .navbar-nav .nav-item .language {
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding-left: 3px;
+  top: 30px;
+  padding-top: 20px;
+}
+.container .navbar-nav .nav-item .language ol {
+  list-style-type: none;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.container .navbar-nav .nav-item .language ol > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.container .navbar-nav .nav-item .language ol li span {
+  color: #000 !important;
+}
+.container .navbar-nav .nav-item .language ol li:hover span {
+  color: #f15555ec !important;
+}
+.container .navbar-nav .nav-item:hover .language {
+  visibility: visible;
+}
+.container .navbar-nav .nav-item .language::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 19px;
+  background-color: #ffffffba;
+  width: 100%;
+  height: 90%;
+  z-index: -9999999;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.navbar-nav li:hover {
+  background-color: #63616135 !important;
+  border-radius: 30px;
+  max-width: 220px;
+}
+.navbar-nav li:hover a {
+  color: #f15555ec !important;
+}
+.navbar-expand-sm .navbar-toggle {
+  border-color: transparent;
+  color: #ffffff !important;
+}
+
+.navbar-expand-sm .navbar-toggle .fa-solid {
+  font-size: 20px;
+  color: #000;
+}
+
+/* account user
+--------------------------------------------------------------------------------
+*/
+.signIn {
+  min-width: 250px;
+  border-radius: 10px;
+  position: absolute;
+  top: 20px;
+  display: flex;
+  justify-content: space-around;
+  right: -30px;
+}
+.signIn .image-user {
+  padding: 10px;
+}
+
+.signIn img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.signIn .name-user {
+  width: 200px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 40px;
+  top: -5px;
+}
+
+.signIn .name-user span {
+  font-size: 16px;
+  color: #000000;
+}
+.jumbotron {
+  background-color: transparent;
+  color: #fff;
+  padding: 60px 25px;
+  margin-top: 50px;
+}
+
+.input-group {
+  display: flex;
+  justify-content: center;
+}
+.input-group .form-control {
+  max-width: 300px;
+}
+.input-group-btn button {
+  border: none !important;
+  outline: none !important;
+}
+
+/*toggle responsive 
+--------------------------------------------------------------------------------
+*/
+.bar-content_toggle {
+  height: 65vh;
+  background-color: rgb(0, 0, 0);
+  top: 0;
+  width: 300px;
+  position: absolute;
+  right: 0;
+  min-width: 50px;
+  display: none;
+  z-index: 1000;
+}
+
+.bar-content_toggle > .bar-list {
+  display: flex;
+  flex-direction: column;
+  min-width: 100px;
+  height: 100%;
+  padding-top: 20px;
+  list-style-type: none;
+}
+
+.bar-content_toggle h3 {
+  color: #fff;
+  margin-top: 40px;
+  margin-left: 30px;
+}
+
+.bar-content_toggle > .bar-list li {
+  margin-top: 10px;
+}
+
+.bar-content_toggle > .bar-list li i {
+  background-color: rgb(255, 255, 255);
+  color: rgb(40, 102, 128);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  padding-top: 15px;
+}
+
+.bar-content_toggle > .bar-list li i::before {
+  display: flex;
+  justify-content: center;
+}
+.hidden-icon {
+  display: none;
+}
+
+.exit {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding-top: 10px;
+  text-align: center;
+}
+.exit i {
+  font-size: 20px;
+  color: white;
+  text-align: center;
+}
+
+.bar-content_toggle > .bar-list span {
+  padding-left: 7px;
+  padding-top: 5px;
+  color: #fff;
+}
+/*responsive header 
+----------------------------------------------------------------------------------------------------
+*/
+
+@media only screen and (max-width: 768px) {
+  .signIn {
+    display: none;
+  }
+  .container .navbar-nav .hidden-item {
+    display: none;
+  }
+  .navbar .navbar-brand img {
+    width: 80px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .container .navbar-nav .hidden-item-language {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .signIn .name-user {
+    left: 150px;
+    top: -5px;
+  }
+  .signIn > .name-user > span {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .navbar .navbar-brand img {
+    left: 10px;
+  }
+  .container .navbar-nav li {
+    padding: 0 10px;
+  }
+}
+
+/*
+ND----------------------------------------------------------------------------------------------
+*/
+
+.nd{
+  font-family: 'Times New Roman', Times, serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+}
+.main{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.chinh{
+  min-width: 400px;
+  width: 35vw;
+}
+.phu{
+  width: 221px;
+  height: 280px;
+  margin-left: 20px;
+  margin-right: 20px;
+  position: relative;
+  border: 1px inset black;
+}
+.but{
+  width: 100%;
+  height: 40px;
+  background-color: #55D268;
+  border: none;
+}
+.header{
+  font-size: 20px;
+  font-weight: bold;
+}
+.rate{
+  margin-top: 10px;
+  font-size: 15px;
+  color: #55D268;
+}
+h1{
+  margin-top: 0;
+  font-size: 15px;
+  margin-bottom: 0px;
+}
+.content h2{
+  font-size: 15px;
+  color: red;
+  margin-top: 0;
+  margin-bottom: 0px; 
+}
+p{
+  margin-top: 5px;
+}
+.swiper-container{
+  width: 50vw ;
+  min-width: 400px;
+  height: 254px;
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  overflow-x: hidden;
+}
+.part_1{
+  width: 241px;
+  height: 254px;
+}
+.pic{
+  width: 236px;
+  height: 115px;
+  background-image: url(/image/pic_2_5.jpg);
+  background-size: cover;
+}
+.Pic{
+  width: 221px;
+  height: 115px;
+  background-image: url(/image/pic_2_4.jpg);
+}
+.Nd{
+  width: 210px;
+  height: 115px;
+  padding: 5px;
+}
+.ND{
+  width: 236px;
+  height: 115px;
+}
+.nd1{
+  font-size: 14px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.nd2,.nd3,.nd4{
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.nd4{
+  border-top: 1px inset;
+}
+.link{
+  position: absolute;
+  top:0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-decoration: none;
+  color: black;
+}
+.link:hover{
+  text-decoration: none;
+}
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+/*FOOTER 
+--------------------------------------------------------------------------------------------------
+*/
+.footer-container_1,
+.footer-container_2,
+.logo-footer,
+.container-socials {
+  background-color: rgb(40, 102, 128);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-footer img {
+  width: 100px;
+  background-color: rgb(40, 102, 128);
+}
+
+.logo-footer p {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.divider,
+.container-socials {
+  background-color: rgb(40, 102, 128);
+}
+ul {
+  list-style-type: none;
+}
+
+.information-Company {
+  background-color: rgb(40, 102, 128);
+  border-top: 2px solid #fff;
+}
+
+.aboutUsItem > a:hover,
+.container-socials > ul li > a > i:hover,
+.Copyright > a:hover {
+  color: rgb(194, 245, 73) !important;
+  text-decoration: none;
+}
+
+.aboutUsItem > a:hover {
+  color: #fff;
+}
+.container-socials > ul li > a {
+  text-decoration: none;
+  color: #fff;
+}
+.container-socials > ul li > a > i {
+  color: #fff;
+  font-size: 25px;
+  padding: 5px 10px;
+}
+.container-socials > ul .list-socials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+    </style>
+    
+</head>
+  </head>
+  <body>
+    <!--HEADER------------------------------------------------------------------------------- -->
+    <div>
+      <!--SLIDER---------------------------------------------------------------------------->
+      <div class="slider">
+        <div class="slider-list_items">
+          <div class="item">
+            <a href="">
+              <img src="/image/hue4.jpg" alt="img" />
+            </a>
+          </div>
+          <div class="item">
+            <a href="">
+              <img src="/image/halong1.jpg" alt="img" />
+            </a>
+          </div>
+          <div class="item">
+            <a href="">
+              <img src="/image/hagiang1.jpg" alt="img" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="buttons" style="display: none">
+        <button id="prev"><</button>
+        <button id="next">></button>
+      </div>
+      <!--NAVBAR HEADER------------------------------------------------------------------------ -->
+      <nav class="navbar navbar-expand-sm fixed-top">
+        <div class="container">
+          <a class="navbar-brand"><img src="/image/logo.png" alt="logo" /></a>
+          <div class="bar-content_toggle">
+            <div class="exit"><i class="fa-solid fa-xmark"></i></div>
+            <h3>Danh mục</h3>
+            <ul class="bar-list">
+              <li class="bar-item">
+                <a href="#">
+                  <i class="fa-solid fa-house"></i><span>Trang chủ</span></a
+                >
+              </li>
+              <li class="bar-item">
+                <a href="#">
+                  <i class="fa-solid fa-book"></i
+                  ><span>Tin tức du lịch</span></a
+                >
+              </li>
+              <li class="bar-item">
+                <a href="#"
+                  ><i class="fa-solid fa-location-dot"></i><span>Tour</span></a
+                >
+              </li>
+              <li class="bar-item">
+                <a href="#"
+                  ><i class="fa-solid fa-phone"></i><span>Liên hệ</span></a
+                >
+              </li>
+              <li class="bar-item">
+                <a href="#">
+                  <i class="fa-solid fa-user"></i><span>Tài khoản</span></a
+                >
+              </li>
+              <li class="bar-item">
+                <a href="#">
+                  <i class="fa-solid fa-pen-to-square"></i
+                  ><span>Điều khoản</span></a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="bar-icon">
+            <button type="button" class="bar-icon_i navbar-toggler">
+              <span class="navbar-toggler-icon"
+                ><i class="fa-solid fa-bars"></i
+              ></span>
+            </button>
+          </div>
+
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Trang chủ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Tin tức du lịch</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Tour</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Liên hệ</a>
+              </li>
+              <li class="nav-item hidden-item">
+                <a class="nav-link" href="#">Điều khoản</a>
+              </li>
+              <li class="nav-item hidden-item-language">
+                <a class="nav-link" href="#"
+                  >Tiếng Việt<i class="fa-solid fa-caret-down"></i
+                ></a>
+                <div class="language">
+                  <ol>
+                    <li>
+                      <a href=""><span>Tiếng Việt</span></a>
+                    </li>
+                    <li>
+                      <a href=""><span>Tiếng Anh</span></a>
+                    </li>
+                  </ol>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!--USER ACCOUNT--------------------------------------------------------------------- -->
+          <div class="signIn">
+            <div class="name-user">
+              <span>Minh Quân</span>
+              <div class="image-user">
+                <a href="#"
+                  ><img
+                    src="https://store.bbcosplay.com/news/2023/04/15/hatsune-miku-la-ai-co-ca-si-ao-tai-nhat-ban-co-luong-fan-khung.jpg"
+                    alt="img"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!--JUMBOTRON - INPUT SEARCH----------------------------------------------------------------- -->
+      <div class="jumbotron text-center">
+        <h2>Du lịch khắp nơi - Khám phá đất nước Việt Nam</h2>
+        <p>Du lịch khắp Việt Nam</p>
+        <form action="/filter-common" method="GET" class="row g-3">
+          <div class="input-group" name="address">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Nhập địa điểm muốn đến..."
+              name = "title"
+            />
+            <div class="input-group-btn btn-filter-common">
+              <button type="submit" class="btn btn-success">Tìm kiếm</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </header>
+    <!-- Phần nội dung  -->
+    <div style="margin-top:70px ;" class="nd">
+      <div class="tieude">
+          <div class="header">Tour câu mực đêm Quy Nhơn - Hành trình Trải nghiệm thú vị</div>
+          <div class="rate">
+              <span class="point" style="margin-right:200px ;">Điểm: 9.1/10 (Rất tốt)</span>
+              <span class="quantity">Lượt khách: 235</span>
+          </div>
+          <div class="main">
+              <div class="chinh">
+                  <div class="content">
+                      <h1>Có gì hấp dẫn ở Tour câu mực đêm Quy Nhơn?</h1>
+                      <p>Ngoài việc tham gia các chuyến tham quan du lịch, việc khám phá và trải nghiệm cảm giác mới
+                          mẻ cũng đang thu hút sự chú ý đặc biệt. Một trong những điểm nổi bật là tour câu mực đêm tại
+                          Quy Nhơn, đang thu hút sự quan tâm của nhiều người. Không chỉ là việc ngắm nhìn cảnh đẹp, mà
+                          trên hành trình này, bạn còn có cơ hội thực hành câu mực vào ban đêm - một trải nghiệm độc
+                          đáo và thú vị. <br>
+                          Thuyền sẽ đưa bạn ra khơi, nơi sóng biển vỗ nhẹ nhàng và bầu không khí trở nên yên bình. Bạn
+                          sẽ được hướng dẫn cách câu mực bởi những người dân địa phương, và tham gia trực tiếp vào
+                          hoạt động này. Việc quan sát những con mực bạn câu được sẽ mang lại cho bạn cảm giác thư
+                          giãn và thoải mái. Cuối cùng, bạn còn được thưởng thức những con mực tươi ngon, được chế
+                          biến theo phong cách độc đáo của địa phương.
+                      </p>
+                      <img style="width: 35vw; min-width: 400px;" src="/image/pic_2_1.jpg" alt="Ảnh 1">
+                      <h1>Lịch trình:</h1>
+                      <h2>Chiều: </h2>
+                      <p>Khoảng 17h30, toàn bộ đoàn sẽ băng qua cầu Thị Nại. Do vậy, thời gian hẹn với khách hàng sẽ
+                          ảnh hưởng bởi thời gian khởi hành của xe du lịch, có thể là từ trước 1 tiếng (tức là 16h30)
+                          hoặc 30 phút (tức là 17h). Trên đường đi, du khách sẽ được chiêm ngưỡng khung cảnh đẹp của
+                          cầu Thị Nại. Nếu xuất phát sớm, du khách còn có cơ hội để check-in tại đây và tận hưởng bức
+                          tranh hoàng hôn tuyệt đẹp
+                      </p>
+                      <img style="width: 35vw; min-width: 400px;" src="/image/pic_2_2.jpg" alt="Ảnh 2">
+                      <h2>Tối: </h2>
+                      <p>18h30 – 18h45: Khách du lịch sẽ được mặc áo phao và lên cano để di chuyển ra khơi, chính thức
+                          bắt đầu hành trình câu mực tại Quy Nhơn vào ban đêm. Người dân làng chài trên bè câu mực sẽ
+                          chỉ dẫn cho bạn cách câu mực theo phong cách bản địa.  <br>
+                          Trong chuyến đi này, du khách sẽ được thưởng thức những món ngon từ mực tươi sống. Ví dụ như
+                          cháo hải sản, mực hấp chấm nước mắm, mực nướng,…Mực còn tươi mới bắt lên sẽ có hương vị cực
+                          kỳ tuyệt vời, chắc chắn sẽ khiến thực khách hài lòng.
+                      </p>
+                      <h2>Đêm:</h2>
+                      <p>Du khách tiếp tục câu mực Quy Nhơn cho đến 21h đêm. Lúc này sẽ dọn dẹp mọi thứ để trở về đất
+                          liền. <br>
+                          21h30: Chính thức kết thúc tour câu mực đêm Quy Nhơn. Xe du lịch đưa cả đoàn khách trở về
+                          trung tâm thành phố Quy Nhơn trở lại điểm hẹn ban đầu.
+                      </p>
+                      <img style="width: 35vw; min-width: 400px;" src="/image/pic_2_3.jpg" alt="Ảnh 3">
+                      <h1>Hỗ trợ đi kèm:</h1>
+                      <p>
+                          Xe ô tô đời mới theo lịch trình <br>
+                          Cano / thuyền câu mực <br>
+                          Dụng cụ chuyên dụng câu mực: Ống câu mực, Cần câu, mồi <br>
+                          Ăn nhẹ: Cháo hải sản / Mì xào hải sản <br>
+                          Dụng cụ chế biến mực: nướng/hấp <br>
+                          Hướng dẫn viên nhiệt tình, có kinh nghiệm về biển đảo Quy Nhơn – Bình Định. <br>
+                          Bảo hiểm du lịch <br>
+                          Nước uống + Khăn lạnh trên xe 2 chai/người/ngày
+                      </p>
+                      <h1>Giá Tour không bao gồm:</h1>
+                      <p>
+                          Thuế VAT 10% <br>
+                          Chi phí ăn uống ngoài chương trình, vui chơi giải trí cá nhân
+                      </p>
+                      <h1>Ưu đãi dành cho trẻ em:</h1>
+                      <p>
+                          Trẻ em dưới 5 tuổi – miễn phí (2 người lớn chỉ được miễn phí 1 trẻ em dưới 5 tuổi, trẻ thứ 2
+                          tính 50%) <br>
+                          Trẻ em từ 5 – 9 tuổi, tính 50% chi phí người lớn <br>
+                          Trẻ từ 10 tuổi trở lên tính bằng chi phí người lớn <br>
+                          Trẻ cao từ 1m4 trở lên tính như người lớn để đảm bảo lượng ăn, vé tham quan
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  </div>
+    <!--footer---------------------------------------------------------------------------------->
+    <div class="container-fluid text-white footer"">
+      <div class="row">
+        <div class="logo-footer col-lg-2 col-5">
+          <div class="logo">
+            <a href="#"><img src="./image/logo.png" alt="logo" /></a>
+          </div>
+          <p>Du lịch muôn nơi với chúng tôi</p>
+        </div>
+
+        <div class="footer-container_1 col-lg-3 col-7 p-4">
+          <ul class="pl-2 aboutUS text-white">
+            <h5>Điều khoản và chính sách</h5>
+            <li class="aboutUsItem">
+              <a href="#" class="text-decoration-none text-white"
+                >Chính sách quyền riêng tư</a
+              >
+            </li>
+            <li class="aboutUsItem">
+              <a href="#" class="text-decoration-none text-white"
+                >Điều khoản và điều kiện</a
+              >
+            </li>
+            <li class="aboutUsItem">
+              <a href="#" class="text-decoration-none text-white"
+                >Quy chế hoạt động</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-container_2 col-lg-3 col-5 p-4">
+          <ul class="pl-2 aboutUS text-white">
+            <h5>Về chúng tôi</h5>
+            <li class="aboutUsItem">
+              <a href="#" class="text-decoration-none text-white">Liên hệ</a>
+            </li>
+            <li class="aboutUsItem">
+              <a href="#" class="text-decoration-none text-white">Trợ giúp</a>
+            </li>
+            <li class="aboutUsItem">
+              <a href="#" class="text-decoration-none text-white">Tuyển dụng</a>
+            </li>
+          </ul>
+        </div>
+        <div class="container-socials col-lg-3 col-7">
+          <ul>
+            <h5>Liên hệ với chúng tôi</h5>
+            <div class="list-socials">
+              <li>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              </li>
+            </div>
+          </ul>
+        </div>
+        <div class="divider col-lg-1 col-sm-0"></div>
+      </div>
+      <div class="row">
+        <div class="col-12 information-Company pt-3 text-center">
+          <p>
+            Công ty: ...............Mã số doanh nghiệp: ...............Địa
+            chỉ:........................
+          </p>
+          <div class="Copyright pb-3">
+            <a href="#" class="text-decoration-none text-white"
+              >Copyright 2024.
+            </a>
+            <span>All rights reserved</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+    <script src="header.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</html>
